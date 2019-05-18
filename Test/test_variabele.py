@@ -1,5 +1,6 @@
 from unittest import TestCase
 
+
 from src.variabeleClass import Variabele
 
 class TestVariabele(TestCase):
@@ -8,6 +9,13 @@ class TestVariabele(TestCase):
         self.assertIsInstance(v,Variabele)
         v = Variabele("6")
         self.assertIsInstance(v, Variabele)
+        v = Variabele("6d6")
+        self.assertIsInstance(v, Variabele)
+        v = Variabele("10")
+        self.assertIsInstance(v, Variabele)
+        v = Variabele("2d6")
+        self.assertEqual(len(v.waarde) , 36)
+
 
     def test___init2__(self):
         self.assertRaises(ValueError, Variabele, ("x"))

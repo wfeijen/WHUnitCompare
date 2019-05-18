@@ -1,9 +1,11 @@
 import numpy as np
 
-def fun(x: str):
-    print(x)
+import re
 
-fun("1")
 
-fun(1)
+strIn = '11 pipers piping, 10'
+x = re.match('\w+', strIn).group(0)
 
+y = re.match('[a-z]+', strIn).group(0)
+
+v.group(0)

@@ -1,36 +1,32 @@
 # used to have flexibility in the way we operate with variabeles
 import re
 
+
+def waardenVerdeling(dobbelsteen, aantal):
+    waardenDitLevel = list(range(1, dobbelsteen + 1))
+    if aantal == 1:
+        waarden = waardenDitLevel
+    else:
+        waarden = []
+        for waardeVolgendLevel in waardenVerdeling(dobbelsteen, aantal - 1):
+            for waardeDitLevel in waardenDitLevel:
+                waarden.append(waardeVolgendLevel + waardeDitLevel)
+    return waarden
+
+
 class Variabele:
     def __init__(self, stringIn=""):
-        #check format
-        match = re.match("^[0-9]?d?[0-9][0-9]?$", stringIn)
-        if not match:
+        if re.match("^[0-9][0-9]?$", stringIn):
+            self.waarde = [int(stringIn)]
+        elif re.match("^d[0-9][0-9]?$", stringIn):
+            stringIn = stringIn[1:]
+            self.waarde = waardenVerdeling(int(stringIn), 1)
+        elif re.match("^[0-9]d[0-9][0-9]?$", stringIn):
+            nrs = list(map(int, stringIn.split("d")))
+            self.waarde = waardenVerdeling(nrs[1], nrs[0])
+        else:
             raise ValueError("it's not a constant or a die")
 
-        if stringIn[0] == "d":
-            stringIn = stringIn[1:]
-            self.waarde = list(range(int(stringIn)))
-        elif stringIn[1] != "d":
-            self.waarde = list(range(int(stringIn), int(stringIn)))
-        else
 
-
-
-            #if eersteletter d
-        # dan dice
-        #anders vaste waarde
-
-    def kansdichtheid(self, dobbelsteen, aantal):
-        kdl = {}
-        for i in range(dobbelsteen):
-            kdl[i] = 1 / dobbelsteen
-        if aantal == 1:
-            kd = kdl
-        else:
-            kd = {}
-            for k in kansdichtheid(dobbelsteen, aantal - 1):
-                for kl in kdl:
-                    x=1
 
 
