@@ -1,0 +1,15 @@
+Weapon ;Range ;Type en shots;S ;AP ;D ;Abilities
+A;Melee;Melee ;User;1;2;Abilities
+B;12;Assault;3;5;2;b
+C;Melee;Melee ;User;1;2;c
+D;12;Assault;3;5;2;d
+E;Melee;Melee ;User;1;2;e
+F;12;Assault;3;5;2;f
+Plagueburst Mortar;"12""-48""";Heavy D6;8;-2;D3;Plague Weapon. This weapon can target units that are not visible to the bearer.
+Improvised weapon;Melee;Melee;User;0;1;-
+Plaguespitter;"9""";Assault D6;User;-1;1;Plague Weapon.This weapon automatically hits its target.
+Injector pistol;"3""";Pistol 1;4;-1;D6;Plague Weapon. This weapon's damage changes to 1 when attacking VEHICLES.
+Hyper Blight Grenades;"6""";Grenade D6;4;0;2;Plague Weapon. Each wound roll of 6+ made for this weapon inflicts a mortal wound in addition to any other damage.
+Bubotic Axe;Melee;Melee;1;-2;1;You can re-roll wound rolls of 1 for this weapon.
+Great plague cleaver;Melee;Melee;x2;-3;D6;When attacking with this weapon, you must subtract 1 from the hit roll. You can re-roll wound rolls of 1 for this weapon.
+Contagion spray;"9""";Pistol 2D3;*;-2;1;Attacks made with this weapon automatically hit the selected target. This weapon always wounds on a result of a 2+ unless the target unit has the VEHICLE keyword, in which case a result of 6+ is required.

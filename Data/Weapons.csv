@@ -1,10 +1,10 @@
 Weapon ;Range ;Type en shots;S ;AP ;D ;Abilities
-A;0;Melee ;;User ;2;1;
-B;12;Assault;3;5;2;1;
-C;0;Melee ;;User ;2;1;
-D;12;Assault;3;5;2;1;
-E;0;Melee ;;User ;2;1;
-F;12;Assault;3;5;2;1;
+A;Melee ;Melee;User ;2;1;
+B;12;Assault 3;5;2;1;
+C;Melee ;Melee;User ;2;1;
+D;12;Assault 3;5;2;1;
+E;Melee ;Melee;User ;2;1;
+F;12;Assault 3;5;2;1;
 Plagueburst Mortar;12"-48";Heavy D6;8;-2;D3;Plague Weapon. This weapon can target units that are not visible to the bearer.
 Improvised weapon;Melee;Melee;User;0;1;-
 Plaguespitter;9";Assault D6;User;-1;1;Plague Weapon.This weapon automatically hits its target.

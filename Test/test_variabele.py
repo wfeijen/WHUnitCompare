@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 
-from src.variabeleClass import Variabele
+from src.Variabele import Variabele
 
 class TestVariabele(TestCase):
     def test___init1__(self):

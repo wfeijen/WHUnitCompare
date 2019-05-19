@@ -25,7 +25,7 @@ class Variabele:
             nrs = list(map(int, stringIn.split("d")))
             self.waarde = waardenVerdeling(nrs[1], nrs[0])
         else:
-            raise ValueError("it's not a constant or a die")
+            raise ValueError(stringIn, " it's not a constant or a die")
 
 
 

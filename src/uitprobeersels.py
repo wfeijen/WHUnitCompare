@@ -1,11 +1,9 @@
 import numpy as np
 
-import re
+import csv
 
+file = open('../Data/Weapons.csv', 'r')
 
-strIn = '11 pipers piping, 10'
-x = re.match('\w+', strIn).group(0)
+print(file.readline())
 
-y = re.match('[a-z]+', strIn).group(0)
-
-v.group(0)
+file.close()

@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from src.weaponClass import Weapon
+from src.Weapon import Weapon
 
 class TestWeapon(TestCase):
     def test___init1__(self):
