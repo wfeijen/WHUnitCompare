@@ -1,15 +1,15 @@
-Weapon ;Range ;Type en shots;S ;AP ;D ;Abilities
-A;Melee ;Melee;User ;2;1;
-B;12;Assault 3;5;2;1;
-C;Melee ;Melee;User ;2;1;
-D;12;Assault 3;5;2;1;
-E;Melee ;Melee;User ;2;1;
-F;12;Assault 3;5;2;1;
-Plagueburst Mortar;12"-48";Heavy D6;8;-2;D3;Plague Weapon. This weapon can target units that are not visible to the bearer.
-Improvised weapon;Melee;Melee;User;0;1;-
-Plaguespitter;9";Assault D6;User;-1;1;Plague Weapon.This weapon automatically hits its target.
-Injector pistol;3";Pistol 1;4;-1;D6;Plague Weapon. This weapon's damage changes to 1 when attacking VEHICLES.
-Hyper Blight Grenades;6";Grenade D6;4;0;2;Plague Weapon. Each wound roll of 6+ made for this weapon inflicts a mortal wound in addition to any other damage.
-Bubotic Axe;Melee;Melee;+1;-2;1;You can re-roll wound rolls of 1 for this weapon.
-Great plague cleaver;Melee;Melee;x2;-3;D6;When attacking with this weapon, you must subtract 1 from the hit roll. You can re-roll wound rolls of 1 for this weapon.
-Contagion spray;9";Pistol 2D3;*;-2;1;Attacks made with this weapon automatically hit the selected target. This weapon always wounds on a result of a 2+ unless the target unit has the VEHICLE keyword, in which case a result of 6+ is required.
+Weapon ;Range ;Type en shots;S ;AP ;D ;Abilities;Cost
+A;Melee ;Melee;User ;2;1;;1
+B;12;Assault 3;5;2;1;;2
+C;Melee ;Melee;User ;2;1;;3
+D;12;Assault 3;5;2;1;;4
+E;Melee ;Melee;User ;2;1;;5
+F;12;Assault 3;5;2;1;;6
+Plagueburst Mortar;12"-48";Heavy D6;8;-2;D3;Plague Weapon. This weapon can target units that are not visible to the bearer.;7
+Improvised weapon;Melee;Melee;User;0;1;-;8
+Plaguespitter;9";Assault D6;User;-1;1;Plague Weapon.This weapon automatically hits its target.;9
+Injector pistol;3";Pistol 1;4;-1;D6;Plague Weapon. This weapon's damage changes to 1 when attacking VEHICLES.;10
+Hyper Blight Grenades;6";Grenade D6;4;0;2;Plague Weapon. Each wound roll of 6+ made for this weapon inflicts a mortal wound in addition to any other damage.;11
+Bubotic Axe;Melee;Melee;+1;-2;1;You can re-roll wound rolls of 1 for this weapon.;12
+Great plague cleaver;Melee;Melee;x2;-3;D6;When attacking with this weapon, you must subtract 1 from the hit roll. You can re-roll wound rolls of 1 for this weapon.;13
+Contagion spray;9";Pistol 2D3;*;-2;1;Attacks made with this weapon automatically hit the selected target. This weapon always wounds on a result of a 2+ unless the target unit has the VEHICLE keyword, in which case a result of 6+ is required.;14

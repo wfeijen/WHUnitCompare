@@ -55,6 +55,8 @@ class Weapon:
             self.D = Variabele(strItems[field])
             field = 6
             self.abilities = strItems[field]
+            field = 7
+            self.cost = int(strItems[field])
         except ValueError as e:
             print("############")
             print("     De volgende wapenregel kon niet verwerkt worden: ", stringIn)
