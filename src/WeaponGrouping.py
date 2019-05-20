@@ -6,7 +6,7 @@ import re
 #1-6|A,B[0-4|C,[0-4|E,F][0-4|D]]
 #1-6|[0-3|A,B][0-3|C,D][0-3|E,F]
 
-class WeaponGrouping:
+class WeaponGrouping(list):
     def __init__(self, stringIn, weaponDictionary):
         # left from | is the possible occurrences
         possibleOccurencesString = re.match("[0-9\-]+\|", stringIn).group(0)[:-1]
@@ -18,20 +18,19 @@ class WeaponGrouping:
             self.maxOccurrences = self.minOccurences
 
         groupContents = stringIn[len(possibleOccurencesString)+1:]
-        self.weaponList = []
         weaponName = ""
         haakjesDiepte = 0
         for i in range(len(groupContents)):
             if groupContents[i] == "," and haakjesDiepte == 0:
                 weapon = weaponDictionary.weapons[weaponName]
-                self.weaponList.append(weapon)
+                self.append(weapon)
                 weaponName = ""
             elif groupContents[i] == "[":
                 if haakjesDiepte == 0:
                     groepString = ""
                     if weaponName != "":
                         weapon = weaponDictionary.weapons[weaponName]
-                        self.weaponList.append(weapon)
+                        self.append(weapon)
                         weaponName = ""
                 else:
                     groepString = groepString + groupContents[i]
@@ -40,7 +39,7 @@ class WeaponGrouping:
                 haakjesDiepte = haakjesDiepte - 1
                 if haakjesDiepte == 0:
                     nieuweWeaponGroup = WeaponGrouping(groepString, weaponDictionary)
-                    self.weaponList.append(nieuweWeaponGroup)
+                    self.append(nieuweWeaponGroup)
                 else:
                     groepString = groepString + groupContents[i]
             elif haakjesDiepte == 0:
@@ -49,7 +48,7 @@ class WeaponGrouping:
                 groepString = groepString + groupContents[i]
         if weaponName != "":
             weapon = weaponDictionary.weapons[weaponName]
-            self.weaponList.append(weapon)
+            self.append(weapon)
 
 
 
