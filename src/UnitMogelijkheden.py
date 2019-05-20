@@ -1,7 +1,6 @@
 from src.Variabele import Variabele
 from src.WeaponGrouping import WeaponGrouping
 
-
 # Codex;Unit ;M ;WS ;BS ;S ;T ;W ;A ;Ld ;Save ;Weapons
 
 class UnitMogelijkheden:
