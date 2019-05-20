@@ -14,16 +14,16 @@ def waardenVerdeling(dobbelsteen, aantal):
     return waarden
 
 
-class Variabele:
+class Variabele(list):
     def __init__(self, stringIn=""):
         if re.match("^[0-9][0-9]?$", stringIn):
-            self.waarde = [int(stringIn)]
+            self.append(int(stringIn))
         elif re.match("^d[0-9][0-9]?$", stringIn):
             stringIn = stringIn[1:]
-            self.waarde = waardenVerdeling(int(stringIn), 1)
+            self.extend(waardenVerdeling(int(stringIn), 1))
         elif re.match("^[0-9]d[0-9][0-9]?$", stringIn):
             nrs = list(map(int, stringIn.split("d")))
-            self.waarde = waardenVerdeling(nrs[1], nrs[0])
+            self.extend(waardenVerdeling(nrs[1], nrs[0]))
         else:
             raise ValueError(stringIn, " it's not a constant or a die")
 
