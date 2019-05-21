@@ -1,15 +1,16 @@
 from src.UnitMogelijkheden import UnitMogelijkheden
 from src.WeaponsDict import WeaponsDict
+from src.UnitMogelijkheden import UnitMogelijkheden
 
 class UnitMogelijkhedenList(list):
     def __init__(self, unitMogelijkhedenFile = "", weaponsFile = ""):
         wd = WeaponsDict(weaponsFile)
-        with open('../Data/Weapons.csv', 'r') as file:
+        with open(unitMogelijkhedenFile, 'r') as file:
             print(file.readline())
             rows = file.read().splitlines()
             for row in rows:
-                #print(row)
-                weapon = Weapon(row)
-                self.weapons[weapon.name] = weapon
-            print("wapen regels gelezen: ",len(rows))
-            print("wapens in dict: ",len(self.weapons))
+                print(row)
+                unitMogelijkheden = UnitMogelijkheden(row, wd)
+                self.append(unitMogelijkheden)
+            print("units regels gelezen: ",len(rows))
+            print("units in dict: ",len(self))
