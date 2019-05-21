@@ -22,14 +22,14 @@ class WeaponGrouping(list):
         haakjesDiepte = 0
         for i in range(len(groupContents)):
             if groupContents[i] == "," and haakjesDiepte == 0:
-                weapon = weaponDictionary.weapons[weaponName]
+                weapon = weaponDictionary[weaponName]
                 self.append(weapon)
                 weaponName = ""
             elif groupContents[i] == "[":
                 if haakjesDiepte == 0:
                     groepString = ""
                     if weaponName != "":
-                        weapon = weaponDictionary.weapons[weaponName]
+                        weapon = weaponDictionary[weaponName]
                         self.append(weapon)
                         weaponName = ""
                 else:
@@ -47,7 +47,7 @@ class WeaponGrouping(list):
             else:
                 groepString = groepString + groupContents[i]
         if weaponName != "":
-            weapon = weaponDictionary.weapons[weaponName]
+            weapon = weaponDictionary[weaponName]
             self.append(weapon)
 
 

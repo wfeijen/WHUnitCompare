@@ -9,5 +9,5 @@ class TestWeaponsList(TestCase):
 
     def test___init1__(self):
         wd = WeaponsDict("../Data/Weapons.csv")
-        w = wd.weapons['a']
+        w = wd['a']
         self.assertEqual('a', w.name)
