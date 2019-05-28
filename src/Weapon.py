@@ -2,14 +2,18 @@ from src.Variabele import Variabele
 import re
 
 
-#Weapon ;Range ;Type shots;S ;AP ;D ;Abilities
+#Cost,Codex, Weapon ;Range ;Type shots;S ;AP ;D ;Abilities
 class Weapon:
-    def __init__(self, stringIn = ""):
+    def __init__(self, stringIn):
         strItems = stringIn.replace('"', '').lower().split(";")
         field = 0
-        self.name = strItems[0]
+        self.cost = int(strItems[field])
+        field = field + 1
+        self.codex = strItems[field]
+        field = field + 1
+        self.name = strItems[field]
         try:
-            field = 2
+            field = field + 2
             strTypeShots = strItems[field].split(" ")
             if re.match("^melee", strTypeShots[0]):
                 self.type = "melee"
@@ -20,7 +24,7 @@ class Weapon:
                 self.shots = Variabele(strTypeShots[1])
                 self.shots.AttacksUser = False
 
-            field = 1
+            field = field - 1
             strRange = strItems[field].split("-")
             if re.match("^melee", strRange[0]):
                 self.rangeMin = Variabele("0")
@@ -35,7 +39,7 @@ class Weapon:
                 self.rangeMin = Variabele("1")
                 self.rangeMax = Variabele(strRange[0])
 
-            field = 3
+            field = field + 2
             if re.match("^user", strItems[field]):
                 self.S  = Variabele("0")
                 self.S.efectModelStrengt = "+"
@@ -49,14 +53,12 @@ class Weapon:
                 self.S = Variabele(strItems[field])
                 self.S.efectModelStrengt = ""
 
-            field = 4
+            field = field + 1
             self.AP = Variabele(strItems[field].replace("-",""))
-            field = 5
+            field = field + 1
             self.D = Variabele(strItems[field])
-            field = 6
+            field = field + 1
             self.abilities = strItems[field]
-            field = 7
-            self.cost = int(strItems[field])
         except ValueError as e:
             print("############")
             print("     De volgende wapenregel kon niet verwerkt worden: ", stringIn)

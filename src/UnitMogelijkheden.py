@@ -1,15 +1,17 @@
 from src.Variabele import Variabele
 from src.WeaponGrouping import WeaponGrouping
 
-# Codex;Unit ;M ;WS ;BS ;S ;T ;W ;A ;Ld ;Save ;Weapons
+# Cost; Codex;Unit ;M ;WS ;BS ;S ;T ;W ;A ;Ld ;Save ;Weapons
 
 class UnitMogelijkheden:
     def __init__(self, stringIn, wd):
         stringDelen = stringIn.lower().split(";")
         i = 0
-        self.Codex = stringDelen[i]
+        self.cost = int(stringDelen[i])
         i = i + 1
-        self.Unit = stringDelen[i]
+        self.codex = stringDelen[i]
+        i = i + 1
+        self.unit = stringDelen[i]
         i = i + 1
         self.M = Variabele(stringDelen[i])
         i = i + 1
@@ -27,8 +29,8 @@ class UnitMogelijkheden:
         i = i + 1
         self.Ld = Variabele(stringDelen[i])
         i = i + 1
-        self.Save = Variabele(stringDelen[i])
+        self.save = Variabele(stringDelen[i])
         i = i + 1
         self.Inv = Variabele(stringDelen[i])
         i = i + 1
-        self.Weapons = WeaponGrouping( stringDelen[i], wd)
+        self.weapons = WeaponGrouping( stringDelen[i], wd)

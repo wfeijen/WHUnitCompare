@@ -1,0 +1,11 @@
+Cost;Codex;Weapon ;Range ;Type en shots;S ;AP ;D ;Abilities
+8;Tau;Airbursting fragmentation projector ;"18"" ";Assault D6 ;4;0;1;This weapon can target units that are not visible to the bearer. 
+8;Tau;Burst cannon ;"18"" ";Assault 4 ;5;0;1;- 
+6;Tau;Flamer ;"8"" ";Assault D6 ;4;0;1;This weapon automatically hits its target. 
+18;Tau;Fusion blaster ;"18"" ";Assault 1 ;8;-4;D6 ;If the target is within half range of this weapon, roll two dice when inflicting damage with it and discard the lowest result. 
+35;Tau;Heavy burst cannon ;"36"" ";Heavy 12 ;6;-1;2;- 
+16;Tau;High-output burst cannon ;"18"" ";Assault 8 ;5;0;1;- 
+50;Tau;Ion accelerator;"72"" ";Heavy D6 ;8;-3;D3 ;- 
+15;Tau;mart missile system ;"30"" ";Heavy 4 ;5;0;1;This weapon can be fired at units that are not visible to the bearer. Units attacked by this weapon do not gain any bonus to their saving throws for being in cover. 
+15;Tau;Missile pod ;"36"" ";Assault 2 ;7;-1;D3 ;- 
+8;Tau;Plasma rifle ;"24"" ";Rapid Fire 1 ;6;-3;1;- 
