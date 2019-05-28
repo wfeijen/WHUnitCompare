@@ -2,7 +2,7 @@ from src.Weapon import Weapon
 
 class WeaponsDict(dict):
     def __init__(self, stringFileLocation = ""):
-        with open('../Data/Weapons.csv', 'r') as file:
+        with open(stringFileLocation, 'r') as file:
             print(file.readline())
             rows = file.read().splitlines()
             for row in rows:

@@ -24,6 +24,8 @@ class Variabele(list):
         elif re.match("^[0-9]d[0-9][0-9]?$", stringIn):
             nrs = list(map(int, stringIn.split("d")))
             self.extend(waardenVerdeling(nrs[1], nrs[0]))
+        elif stringIn == "" or re.match("^[\*]$", stringIn):
+            self.append(0)
         else:
             raise ValueError(stringIn, " it's not a constant or a die")
 

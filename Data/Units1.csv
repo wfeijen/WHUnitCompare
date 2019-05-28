@@ -1,3 +1,3 @@
 Cost;Codex;Unit ;M ;WS ;BS ;S ;T ;W ;A ;Ld ;Save ;Inv;Weapons
 90;Tau;Commander in XV86 Coldstar Battlesuit ;"20"" ";3+ ;2+ ;5;5;6;4;9;3+ ;;0-4|Airbursting fragmentation projector, Burst cannon,Flamer,Fusion blaster,Missile pod,Plasma rifle[0-1|High-output burst cannon]
-185;Tau;XV104 Riptide Battlesuit ;* ;5+ ;* ;6;7;14;* ;8;2+ ;5;0-2||[1|Ion accelerator,Heavy burst cannon][1|[2*Smart missile system],[2*Fusion blaster],[2*Plasma rifle]]
+185;Tau;XV104 Riptide Battlesuit ;* ;5+ ;* ;6;7;14;* ;8;2+ ;5;0-2|[1|Ion accelerator,Heavy burst cannon][1|[2*Smart missile system][2*Fusion blaster][2*Plasma rifle]]

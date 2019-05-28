@@ -1,11 +1,13 @@
 from src.Variabele import Variabele
 from src.WeaponGrouping import WeaponGrouping
+import re
 
 # Cost; Codex;Unit ;M ;WS ;BS ;S ;T ;W ;A ;Ld ;Save ;Weapons
 
 class UnitMogelijkheden:
     def __init__(self, stringIn, wd):
-        stringDelen = stringIn.lower().split(";")
+        stringZonderTekens = re.sub('[+"]', '',stringIn.lower())
+        stringDelen = re.sub(' *; *', ';',stringZonderTekens).split(";")
         i = 0
         self.cost = int(stringDelen[i])
         i = i + 1

@@ -8,16 +8,24 @@ import re
 
 class WeaponGrouping(list):
     def __init__(self, stringIn, weaponDictionary):
+        # Schonen string
+        geschoondeString = re.sub(' *, *', ',', stringIn)
         # left from | is the possible occurrences
-        possibleOccurencesString = re.match("[0-9\-]+\|", stringIn).group(0)[:-1]
-        possibleOccurences = possibleOccurencesString.split("-")
-        self.minOccurences = int(possibleOccurences[0])
-        if (len(possibleOccurences)>1):
-            self.maxOccurrences = int(possibleOccurences[1])
+        possibleOccurencesString = re.match("[0-9\-]+[\|*]", geschoondeString).group(0)
+        possibleOccurences = possibleOccurencesString[:-1].split("-")
+        if possibleOccurencesString[-1:] == "|":
+            self.minOccurences = int(possibleOccurences[0])
+            self.wapensInSlot = 1
+            if (len(possibleOccurences)>1):
+                self.maxOccurrences = int(possibleOccurences[1])
+            else:
+                self.maxOccurrences = self.minOccurences
         else:
-            self.maxOccurrences = self.minOccurences
+            self.minOccurences = 0
+            self.maxOccurrences = 100
+            self.wapensInSlot = int(possibleOccurences[0])
 
-        groupContents = stringIn[len(possibleOccurencesString)+1:]
+        groupContents = geschoondeString[len(possibleOccurencesString):]
         weaponName = ""
         haakjesDiepte = 0
         for i in range(len(groupContents)):
@@ -47,7 +55,13 @@ class WeaponGrouping(list):
             else:
                 groepString = groepString + groupContents[i]
         if weaponName != "":
-            weapon = weaponDictionary[weaponName]
+            try:
+                weapon = weaponDictionary[weaponName]
+            except KeyError as e:
+                print("############")
+                print("     De volgende wapengroeperingsregel kon niet verwerkt worden: ", stringIn)
+                print("     Wapen:", weaponName, " kon niet gevonden worden in de dictionary")
+                print("     De foutmelding is:", e.args)
             self.append(weapon)
 
 

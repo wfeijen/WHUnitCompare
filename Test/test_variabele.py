@@ -28,7 +28,6 @@ class TestVariabele(TestCase):
     def test___init6__(self):
         self.assertRaises(ValueError, Variabele, ("x"))
         self.assertRaises(ValueError, Variabele, ("100"))
-        self.assertRaises(ValueError, Variabele, (""))
 
 
 
