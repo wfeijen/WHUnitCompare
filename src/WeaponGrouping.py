@@ -1,10 +1,13 @@
 import re
+from src.Weapon import Weapon
 
 #1|A
 #1-6|A,B
 #1-6|A,B[0-4|C,D]
 #1-6|A,B[0-4|C,[0-4|E,F][0-4|D]]
 #1-6|[0-3|A,B][0-3|C,D][0-3|E,F]
+
+from collections import defaultdict
 
 class WeaponGrouping(list):
     def __init__(self, stringIn, weaponDictionary):
@@ -24,6 +27,11 @@ class WeaponGrouping(list):
             self.minOccurences = 0
             self.maxOccurrences = 100
             self.wapensInSlot = int(possibleOccurences[0])
+
+        if self.minOccurences > self.maxOccurrences:
+            print("############")
+            print("     De volgende wapengroeperingsregel gaat tot problemen leiden: ", stringIn)
+            print("     Minimunaantal groter dan maximumaantal.")
 
         groupContents = geschoondeString[len(possibleOccurencesString):]
         weaponName = ""
@@ -63,6 +71,40 @@ class WeaponGrouping(list):
                 print("     Wapen:", weaponName, " kon niet gevonden worden in de dictionary")
                 print("     De foutmelding is:", e.args)
             self.append(weapon)
+        self.sort(key = lambda x: x.maxOccurrences, reverse=False)
+
+    def permutaties(self, weaponsSlotsToUse, counter):
+        # retourneert een lijst met permutaties (lijst met lijsten) en een lijst met slotsOver
+
+        # Ontsnappingsclausules
+        if counter == len(self): return ([defaultdict(int)])
+        if weaponsSlotsToUse == 0: return ([defaultdict(int)])
+
+        # for weapon in Counter we either take none, all or whats left, then we do a new iteration with counter +1
+        permutatiesTerug = [] # list of dictionaries met wapen-naam, aantal
+        if type(self[counter]) ==  Weapon:
+            # Twee permutaties
+            # minimalizeer het aantal van dit wapen
+            if self.minOccurences > weaponsSlotsToUse: return None
+
+            # minimize use of this weapon
+            permnutatiesMin = self.permutaties(weaponsSlotsToUse - self.minOccurences, counter + 1)
+            if type(permnutatiesMin) == list:
+                for permutatie in permnutatiesMin:
+                    permutatie[self[counter].name] += self.minOccurences
+                permutatiesTerug.extend(permnutatiesMin)
+            # max out on this weapon
+            maxUse = min(weaponsSlotsToUse, self.maxOccurrences)
+            if self.minOccurences < maxUse: # anders gelijk aan min
+                permnutatiesMax = self.permutaties(weaponsSlotsToUse - maxUse, counter + 1)
+                if type(permnutatiesMax) == list:
+                    for permutatie in permnutatiesMax:
+                        permutatie[self[counter].name] += maxUse
+                    permutatiesTerug.extend(permnutatiesMax)
+
+        return permutatiesTerug
+
+
 
 
 

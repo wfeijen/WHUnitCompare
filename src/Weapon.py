@@ -7,6 +7,8 @@ class Weapon:
     def __init__(self, stringIn):
         stringZonderTekens = re.sub('["]', '', stringIn.lower())
         stringDelen = re.sub(' *; *', ';', stringZonderTekens).split(";")
+        self.maxOccurrences = 100 # Om later binnen weapongrouping op te kunnen sorteren
+
         field = 0
         self.cost = int(stringDelen[field])
         field = field + 1

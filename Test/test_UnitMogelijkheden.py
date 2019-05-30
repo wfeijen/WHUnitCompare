@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 
-from src.UnitMogelijkheden import UnitMogelijkheden
+from src.ModelMogelijkheden import UnitMogelijkheden
 from src.WeaponsDict import WeaponsDict
 
 # Cost; Codex;Unit ;M ;WS ;BS ;S ;T ;W ;A ;Ld ;Save ;Weapons

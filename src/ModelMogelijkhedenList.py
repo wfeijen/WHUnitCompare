@@ -1,8 +1,8 @@
-from src.UnitMogelijkheden import UnitMogelijkheden
+from src.ModelMogelijkheden import UnitMogelijkheden
 from src.WeaponsDict import WeaponsDict
-from src.UnitMogelijkheden import UnitMogelijkheden
+from src.ModelMogelijkheden import UnitMogelijkheden
 
-class UnitMogelijkhedenList(list):
+class ModelMogelijkhedenList(list):
     def __init__(self, unitMogelijkhedenFile = "", weaponsFile = ""):
         wd = WeaponsDict(weaponsFile)
         with open(unitMogelijkhedenFile, 'r') as file:

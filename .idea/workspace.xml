@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d51a5970-cd77-4b5a-ae86-7ff362b04d2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Data/Units1b.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test/test_UnitMogelijkhedenList.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ModelBuild.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ModelBuildList.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Units 1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Units1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Weapons 1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Weapons1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/test_variabele.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test_variabele.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnitMogelijkheden.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitMogelijkheden.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Variabele.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Variabele.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/test_UnitMogelijkheden.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test_UnitMogelijkheden.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/test_UnitMogelijkhedenList.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test_UnitMogelijkhedenList.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/test_WeaponGrouping.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test_WeaponGrouping.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnitBuild.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelEigenschappen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnitFactory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnitMogelijkheden.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelMogelijkheden.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnitMogelijkhedenList.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelMogelijkhedenList.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Weapon.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Weapon.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WeaponGrouping.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/WeaponGrouping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WeaponsDict.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/WeaponsDict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uitprobeersels.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/uitprobeersels.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,110 +27,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/WeaponGrouping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
+            <state relative-caret-position="571">
+              <caret line="98" column="43" selection-start-line="98" selection-start-column="43" selection-end-line="98" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test/test_WeaponGrouping.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
               <caret line="32" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/test_UnitMogelijkhedenList.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="75" selection-start-line="13" selection-start-column="75" selection-end-line="13" selection-end-column="75" />
               <folding>
-                <element signature="e#0#29#0" expanded="true" />
+                <element signature="e#99#128#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/test_variabele.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Variabele.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/anaconda3/envs/WHUnitCompare/lib/python3.7/unittest/case.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="662" selection-start-line="662" selection-end-line="662" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UnitMogelijkheden.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UnitMogelijkhedenList.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test/test_WeaponsDict.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="45" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Weapon.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="67" lean-forward="true" selection-start-line="62" selection-end-line="67" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WeaponsDict.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -172,26 +90,32 @@
         <option value="$PROJECT_DIR$/src/WeaponsLoader.py" />
         <option value="$PROJECT_DIR$/src/WeaponsList.py" />
         <option value="$PROJECT_DIR$/Test/test_WeaponsList.py" />
-        <option value="$PROJECT_DIR$/Test/test_WeaponGrouping.py" />
         <option value="$PROJECT_DIR$/Data/Weapons.csv" />
-        <option value="$PROJECT_DIR$/src/uitprobeersels.py" />
         <option value="$PROJECT_DIR$/src/Unit.py" />
         <option value="$PROJECT_DIR$/Test/test_UnitMogelijkhedenTest.py" />
         <option value="$PROJECT_DIR$/src/UnitMogelijkhedenList.py" />
         <option value="$PROJECT_DIR$/Data/Units.csv" />
         <option value="$PROJECT_DIR$/Test/test_WeaponsDict.py" />
-        <option value="$PROJECT_DIR$/src/UnitBuild.py" />
-        <option value="$PROJECT_DIR$/src/UnitFactory.py" />
         <option value="$PROJECT_DIR$/Test/test_weapon.py" />
         <option value="$PROJECT_DIR$/Test/test_UnitMogelijkheden.py" />
         <option value="$PROJECT_DIR$/Data/Units 1.csv" />
         <option value="$PROJECT_DIR$/src/UnitMogelijkheden.py" />
         <option value="$PROJECT_DIR$/src/WeaponsDict.py" />
-        <option value="$PROJECT_DIR$/src/Weapon.py" />
-        <option value="$PROJECT_DIR$/src/WeaponGrouping.py" />
         <option value="$PROJECT_DIR$/Test/test_UnitMogelijkhedenList.py" />
         <option value="$PROJECT_DIR$/Test/test_variabele.py" />
         <option value="$PROJECT_DIR$/src/Variabele.py" />
+        <option value="$PROJECT_DIR$/src/UnitFactory.py" />
+        <option value="$PROJECT_DIR$/src/UnitBuild.py" />
+        <option value="$PROJECT_DIR$/src/UnitBuildList.py" />
+        <option value="$PROJECT_DIR$/src/ModelMogelijkhedenList.py" />
+        <option value="$PROJECT_DIR$/src/ModelEigenschappen.py" />
+        <option value="$PROJECT_DIR$/src/ModelMogelijkheden.py" />
+        <option value="$PROJECT_DIR$/src/ModelBuild.py" />
+        <option value="$PROJECT_DIR$/src/ModelBuildList.py" />
+        <option value="$PROJECT_DIR$/src/Weapon.py" />
+        <option value="$PROJECT_DIR$/src/uitprobeersels.py" />
+        <option value="$PROJECT_DIR$/src/WeaponGrouping.py" />
+        <option value="$PROJECT_DIR$/Test/test_WeaponGrouping.py" />
       </list>
     </option>
   </component>
@@ -209,32 +133,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="WHUnitCompare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WHUnitCompare" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WHUnitCompare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WHUnitCompare" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WHUnitCompare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WHUnitCompare" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WHUnitCompare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WHUnitCompare" type="462c0819:PsiDirectoryNode" />
-              <item name="Test" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -256,6 +154,32 @@
               <item name="WHUnitCompare" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/PycharmProjects/WHUnitCompare" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="Test" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="WHUnitCompare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WHUnitCompare" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WHUnitCompare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WHUnitCompare" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WHUnitCompare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WHUnitCompare" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WHUnitCompare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WHUnitCompare" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -289,8 +213,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in Test">
-    <configuration name="Unittests for test_UnitMogelijkhedenList.TestVariabele" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__">
+    <configuration name="uitprobeersels" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="WHUnitCompare" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/uitprobeersels.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init1__" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="WHUnitCompare" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -300,11 +245,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_UnitMogelijkhedenList.TestVariabele&quot;" />
+      <option name="_new_target" value="&quot;test_WeaponGrouping.TestWeaponGrouping.test___init1__&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_variabele.TestVariabele.test___init2__" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init2__" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="WHUnitCompare" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -314,11 +259,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_variabele.TestVariabele.test___init2__&quot;" />
+      <option name="_new_target" value="&quot;test_WeaponGrouping.TestWeaponGrouping.test___init2__&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_variabele.TestVariabele.test___init3__" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="WHUnitCompare" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -328,35 +273,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_variabele.TestVariabele.test___init3__&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for test_variabele.TestVariabele.test___init4__" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="WHUnitCompare" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_variabele.TestVariabele.test___init4__&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for test_variabele.TestVariabele.test___init5__" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="WHUnitCompare" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_variabele.TestVariabele.test___init5__&quot;" />
+      <option name="_new_target" value="&quot;test_WeaponGrouping.TestWeaponGrouping.test___init3__&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -371,6 +288,20 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/Test&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test_WeaponGrouping.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="WHUnitCompare" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Test/test_WeaponGrouping.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -390,11 +321,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for test_UnitMogelijkhedenList.TestVariabele" />
-        <item itemvalue="Python tests.Unittests for test_variabele.TestVariabele.test___init5__" />
-        <item itemvalue="Python tests.Unittests for test_variabele.TestVariabele.test___init4__" />
-        <item itemvalue="Python tests.Unittests for test_variabele.TestVariabele.test___init3__" />
-        <item itemvalue="Python tests.Unittests for test_variabele.TestVariabele.test___init2__" />
+        <item itemvalue="Python tests.Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__" />
+        <item itemvalue="Python tests.Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init2__" />
+        <item itemvalue="Python tests.Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init1__" />
+        <item itemvalue="Python.uitprobeersels" />
+        <item itemvalue="Python tests.Unittests in test_WeaponGrouping.py" />
       </list>
     </recent_temporary>
   </component>
@@ -514,59 +445,66 @@
       <option name="project" value="LOCAL" />
       <updated>1559046685047</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Verdubbelaar [2*wapen] toegevoegd">
+      <created>1559057426095</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1559057426095</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_variabele_TestVariabele_test___init5__ - 2019.05.28 at 17h 22m 06s.xml">
-      <configuration name="Unittests for test_variabele.TestVariabele.test___init5__" configurationId="tests" />
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init1__ - 2019.05.30 at 21h 21m 15s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init1__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test - 2019.05.28 at 17h 22m 56s.xml">
-      <configuration name="Unittests in Test" configurationId="tests" />
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init1__ - 2019.05.30 at 21h 21m 19s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init1__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test - 2019.05.28 at 17h 23m 27s.xml">
-      <configuration name="Unittests in Test" configurationId="tests" />
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init1__ - 2019.05.30 at 21h 22m 23s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init1__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test - 2019.05.28 at 17h 26m 13s.xml">
-      <configuration name="Unittests in Test" configurationId="tests" />
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init2__ - 2019.05.30 at 21h 23m 27s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init2__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test - 2019.05.28 at 17h 26m 49s.xml">
-      <configuration name="Unittests in Test" configurationId="tests" />
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init2__ - 2019.05.30 at 21h 28m 30s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init2__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test - 2019.05.28 at 17h 26m 51s.xml">
-      <configuration name="Unittests in Test" configurationId="tests" />
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init2__ - 2019.05.30 at 21h 29m 18s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init2__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_UnitMogelijkhedenList_TestVariabele - 2019.05.28 at 17h 27m 11s.xml">
-      <configuration name="Unittests for test_UnitMogelijkhedenList.TestVariabele" configurationId="tests" />
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init3__ - 2019.05.30 at 21h 30m 05s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_UnitMogelijkhedenList_TestVariabele - 2019.05.28 at 17h 27m 13s.xml">
-      <configuration name="Unittests for test_UnitMogelijkhedenList.TestVariabele" configurationId="tests" />
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init2__ - 2019.05.30 at 21h 30m 17s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init2__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_UnitMogelijkhedenList_TestVariabele - 2019.05.28 at 17h 29m 41s.xml">
-      <configuration name="Unittests for test_UnitMogelijkhedenList.TestVariabele" configurationId="tests" />
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init3__ - 2019.05.30 at 21h 30m 21s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Test - 2019.05.28 at 17h 29m 49s.xml">
-      <configuration name="Unittests in Test" configurationId="tests" />
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init3__ - 2019.05.30 at 21h 31m 32s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1175" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.31765357" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.32540122" />
       <window_info id="Structure" order="1" sideWeight="0.50080514" side_tool="true" weight="0.56640184" />
       <window_info id="Favorites" order="2" sideWeight="0.50080514" side_tool="true" weight="0.56640184" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22848949" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39388144" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30237582" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39308855" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.6069114" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32937366" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32937366" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3288719" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32829374" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -651,20 +589,31 @@
     <MESSAGE value="Unitlist werkt. Voor refactoring" />
     <MESSAGE value="WeaponDict vereenvoudigd" />
     <MESSAGE value="Kosten toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kosten toegevoegd" />
+    <MESSAGE value="Verdubbelaar [2*wapen] toegevoegd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Verdubbelaar [2*wapen] toegevoegd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/uitprobeersels.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="25" />
+          <url>file://$PROJECT_DIR$/src/ModelEigenschappen.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/UnitMogelijkheden.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="58" />
+          <url>file://$PROJECT_DIR$/Test/test_UnitMogelijkheden.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Test/test_WeaponGrouping.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Test/test_WeaponGrouping.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="73" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -681,6 +630,7 @@
         <watch expression="strTypeShots" />
         <watch expression="stringDelen[i]" />
         <watch expression="groupContents[i]" />
+        <watch expression="self.minOccurrences" />
       </configuration>
     </watches-manager>
   </component>
@@ -736,16 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/test_WeaponGrouping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="14" selection-end-line="15" />
-          <folding>
-            <element signature="e#99#128#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/Units.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -757,13 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UnitFactory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="112" selection-start-column="112" selection-end-column="112" />
         </state>
       </provider>
     </entry>
@@ -789,33 +722,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uitprobeersels.py">
+    <entry file="file://$USER_HOME$/anaconda3/envs/WHUnitCompare/lib/python3.7/unittest/suite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="838">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UnitBuild.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/test_weapon.py">
+    <entry file="file://$PROJECT_DIR$/Test/test_UnitMogelijkhedenList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />
+        <state relative-caret-position="150">
+          <caret line="13" column="75" selection-start-line="13" selection-start-column="75" selection-end-line="13" selection-end-column="75" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/test_UnitMogelijkheden.py">
+    <entry file="file://$PROJECT_DIR$/Test/test_variabele.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="12" selection-end-column="52" />
+        <state relative-caret-position="390">
+          <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
@@ -824,7 +751,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/test_WeaponsDict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="60">
           <caret line="6" column="45" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="45" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
@@ -839,73 +766,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/WHUnitCompare/lib/python3.7/unittest/suite.py">
+    <entry file="file://$PROJECT_DIR$/src/ModelMogelijkhedenList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="838">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/WHUnitCompare/lib/python3.7/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="662" selection-start-line="662" selection-end-line="662" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UnitMogelijkhedenList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="60">
+          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Weapon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="67" lean-forward="true" selection-start-line="62" selection-end-line="67" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/test_UnitMogelijkhedenList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="75" selection-start-line="13" selection-start-column="75" selection-end-line="13" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/test_variabele.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/WeaponGrouping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UnitMogelijkheden.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -914,6 +780,101 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Weapon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="51" lean-forward="true" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/test_UnitMogelijkheden.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBuild.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelBuildList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelEigenschappen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ModelMogelijkheden.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/test_weapon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1022">
+          <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/WHUnitCompare/lib/python3.7/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="614" selection-start-line="614" selection-end-line="614" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uitprobeersels.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/test_WeaponGrouping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#99#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WeaponGrouping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="98" column="43" selection-start-line="98" selection-start-column="43" selection-end-line="98" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
