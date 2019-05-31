@@ -99,11 +99,9 @@ class WeaponGrouping(list):
                     permutatiesTerug.extend(gevondenPermutaties)
             # wat als we zorgen dat we voldoen aan minOccurences door nu die occurences te pakken
             if minUse > 0:
-                gevondenPermutaties = self.permutaties(weaponSlotsUsed + minUse, maxUse - minUse, counter + 1)
-                if type(gevondenPermutaties) == list:
-                    for permutatie in gevondenPermutaties:
-                        permutatie[self[counter].name] += minUse
-                    permutatiesTerug.extend(gevondenPermutaties)
+                gevondenPermutatie = defaultdict(int) # we hoeven niet echt meer een aanroep te doen want een ander kan al geen maxuse meer doen
+                gevondenPermutatie[self[counter].name] += minUse
+                permutatiesTerug.append(gevondenPermutatie)
             # max out on this weapon
             if minUse < maxUse: # anders gelijk aan min
                 gevondenPermutatie = defaultdict(int) # we hoeven niet echt meer een aanroep te doen want alles is opgebruikt
