@@ -73,35 +73,42 @@ class WeaponGrouping(list):
             self.append(weapon)
         self.sort(key = lambda x: x.maxOccurrences, reverse=False)
 
-    def permutaties(self, weaponsSlotsToUse, counter):
+    def permutaties(self, weaponSlotsUsed, weaponsSlotsToUse, counter):
         # retourneert een lijst met permutaties (lijst met lijsten) en een lijst met slotsOver
 
         # Ontsnappingsclausules
         if counter == len(self): return ([defaultdict(int)])
         if weaponsSlotsToUse == 0: return ([defaultdict(int)])
+        maxUse = min(weaponsSlotsToUse, self.maxOccurrences)
+        minUse = max(0, self.minOccurences - weaponSlotsUsed)
+        if maxUse < minUse: return None
 
         # for weapon in Counter we either take none, all or whats left, then we do a new iteration with counter +1
         permutatiesTerug = [] # list of dictionaries met wapen-naam, aantal
+
         if type(self[counter]) ==  Weapon:
             # Twee permutaties
             # minimalizeer het aantal van dit wapen
-            if self.minOccurences > weaponsSlotsToUse: return None
+            if self.minOccurences > maxUse: return None
 
-            # minimize use of this weapon
-            permnutatiesMin = self.permutaties(weaponsSlotsToUse - self.minOccurences, counter + 1)
-            if type(permnutatiesMin) == list:
-                for permutatie in permnutatiesMin:
-                    permutatie[self[counter].name] += self.minOccurences
-                permutatiesTerug.extend(permnutatiesMin)
+            # minimize use of this weapon Dit kan op twee manieren. O pakken en andere in dezelfde groep de min laten pakken of min pakken
+            # kijken of we de min door kunnen schuiven naar een ander en zo ja pak 0
+            if minUse == 0 or counter < len(self) - 1:
+                gevondenPermutaties = self.permutaties(weaponSlotsUsed, weaponsSlotsToUse , counter + 1)
+                if type(gevondenPermutaties) == list:
+                    permutatiesTerug.extend(gevondenPermutaties)
+            # wat als we zorgen dat we voldoen aan minOccurences door nu die occurences te pakken
+            if minUse > 0:
+                gevondenPermutaties = self.permutaties(weaponSlotsUsed + minUse, maxUse - minUse, counter + 1)
+                if type(gevondenPermutaties) == list:
+                    for permutatie in gevondenPermutaties:
+                        permutatie[self[counter].name] += minUse
+                    permutatiesTerug.extend(gevondenPermutaties)
             # max out on this weapon
-            maxUse = min(weaponsSlotsToUse, self.maxOccurrences)
-            if self.minOccurences < maxUse: # anders gelijk aan min
-                permnutatiesMax = self.permutaties(weaponsSlotsToUse - maxUse, counter + 1)
-                if type(permnutatiesMax) == list:
-                    for permutatie in permnutatiesMax:
-                        permutatie[self[counter].name] += maxUse
-                    permutatiesTerug.extend(permnutatiesMax)
-
+            if minUse < maxUse: # anders gelijk aan min
+                gevondenPermutatie = defaultdict(int) # we hoeven niet echt meer een aanroep te doen want alles is opgebruikt
+                gevondenPermutatie[self[counter].name] += maxUse
+                permutatiesTerug.append(gevondenPermutatie)
         return permutatiesTerug
 
 

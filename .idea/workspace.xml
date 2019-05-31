@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d51a5970-cd77-4b5a-ae86-7ff362b04d2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ModelBuild.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ModelBuildList.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/test_UnitMogelijkheden.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test_UnitMogelijkheden.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/test_UnitMogelijkhedenList.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test_UnitMogelijkhedenList.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/test_WeaponGrouping.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test_WeaponGrouping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnitBuild.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelEigenschappen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnitFactory.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnitMogelijkheden.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelMogelijkheden.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnitMogelijkhedenList.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModelMogelijkhedenList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Weapon.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Weapon.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WeaponGrouping.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/WeaponGrouping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uitprobeersels.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/uitprobeersels.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/WeaponGrouping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="98" column="43" selection-start-line="98" selection-start-column="43" selection-end-line="98" selection-end-column="43" />
+            <state relative-caret-position="177">
+              <caret line="100" column="26" lean-forward="true" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -42,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/test_WeaponGrouping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="297">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="e#99#128#0" expanded="true" />
               </folding>
@@ -213,7 +203,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__">
+  <component name="RunManager" selected="Python tests.Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3b__">
     <configuration name="uitprobeersels" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="WHUnitCompare" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -277,6 +267,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3b__" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="WHUnitCompare" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_WeaponGrouping.TestWeaponGrouping.test___init3b__&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests in Test" type="tests" factoryName="Unittests" nameIsGenerated="true">
       <module name="WHUnitCompare" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -288,20 +292,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/Test&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in test_WeaponGrouping.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="WHUnitCompare" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Test/test_WeaponGrouping.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -321,11 +311,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3b__" />
         <item itemvalue="Python tests.Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__" />
         <item itemvalue="Python tests.Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init2__" />
         <item itemvalue="Python tests.Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init1__" />
         <item itemvalue="Python.uitprobeersels" />
-        <item itemvalue="Python tests.Unittests in test_WeaponGrouping.py" />
       </list>
     </recent_temporary>
   </component>
@@ -452,38 +442,45 @@
       <option name="project" value="LOCAL" />
       <updated>1559057426095</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Gestart met permutaties voor pure Wapensgroep. Werkt nog niet">
+      <created>1559244819004</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1559244819004</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init1__ - 2019.05.30 at 21h 21m 15s.xml">
-      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init1__" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init1__ - 2019.05.30 at 21h 21m 19s.xml">
-      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init1__" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init1__ - 2019.05.30 at 21h 22m 23s.xml">
-      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init1__" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init2__ - 2019.05.30 at 21h 23m 27s.xml">
-      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init2__" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init2__ - 2019.05.30 at 21h 28m 30s.xml">
-      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init2__" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init2__ - 2019.05.30 at 21h 29m 18s.xml">
-      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init2__" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init3__ - 2019.05.30 at 21h 30m 05s.xml">
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init3__ - 2019.05.31 at 17h 05m 49s.xml">
       <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init2__ - 2019.05.30 at 21h 30m 17s.xml">
-      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init2__" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init3__ - 2019.05.30 at 21h 30m 21s.xml">
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init3__ - 2019.05.31 at 17h 06m 55s.xml">
       <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init3__ - 2019.05.30 at 21h 31m 32s.xml">
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init3__ - 2019.05.31 at 22h 05m 07s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init3__ - 2019.05.31 at 22h 06m 04s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init3__ - 2019.05.31 at 22h 07m 15s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init3__ - 2019.05.31 at 22h 16m 59s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init3__ - 2019.05.31 at 22h 22m 26s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init3__ - 2019.05.31 at 22h 22m 31s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init3__ - 2019.05.31 at 22h 24m 00s.xml">
+      <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_WeaponGrouping_TestWeaponGrouping_test___init3__ - 2019.05.31 at 22h 28m 40s.xml">
       <configuration name="Unittests for test_WeaponGrouping.TestWeaponGrouping.test___init3__" configurationId="tests" />
     </history-entry>
   </component>
@@ -491,13 +488,13 @@
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.32540122" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.3370227" />
       <window_info id="Structure" order="1" sideWeight="0.50080514" side_tool="true" weight="0.56640184" />
       <window_info id="Favorites" order="2" sideWeight="0.50080514" side_tool="true" weight="0.56640184" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.30237582" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39308855" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39308855" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -590,7 +587,8 @@
     <MESSAGE value="WeaponDict vereenvoudigd" />
     <MESSAGE value="Kosten toegevoegd" />
     <MESSAGE value="Verdubbelaar [2*wapen] toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Verdubbelaar [2*wapen] toegevoegd" />
+    <MESSAGE value="Gestart met permutaties voor pure Wapensgroep. Werkt nog niet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gestart met permutaties voor pure Wapensgroep. Werkt nog niet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -607,13 +605,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Test/test_WeaponGrouping.py</url>
-          <line>47</line>
+          <line>54</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Test/test_WeaponGrouping.py</url>
-          <line>32</line>
-          <option name="timeStamp" value="73" />
+          <line>39</line>
+          <option name="timeStamp" value="77" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -860,8 +858,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/test_WeaponGrouping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="297">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="e#99#128#0" expanded="true" />
           </folding>
@@ -870,8 +868,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WeaponGrouping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="98" column="43" selection-start-line="98" selection-start-column="43" selection-end-line="98" selection-end-column="43" />
+        <state relative-caret-position="177">
+          <caret line="100" column="26" lean-forward="true" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

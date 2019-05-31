@@ -15,21 +15,28 @@ class TestWeaponGrouping(TestCase):
         wd = WeaponsDict("../Data/Weapons.csv")
         wg = WeaponGrouping("1|A".lower(), wd)
         self.assertIsInstance(wg, WeaponGrouping)
-        permutaties = wg.permutaties(1000,0)
+        permutaties = wg.permutaties(0, 1000,0)
         self.assertIsInstance(permutaties, list)
 
     def test___init2__(self):
         wd = WeaponsDict("../Data/Weapons.csv")
         wg = WeaponGrouping("1-6|a".lower(), wd)
         self.assertIsInstance(wg, WeaponGrouping)
-        permutaties = wg.permutaties(1000,0)
+        permutaties = wg.permutaties(0, 1000,0)
         self.assertIsInstance(permutaties, list)
 
     def test___init3__(self):
         wd = WeaponsDict("../Data/Weapons.csv")
         wg = WeaponGrouping("1-6|A,B".lower(), wd)
         self.assertIsInstance(wg, WeaponGrouping)
-        permutaties = wg.permutaties(1000,0)
+        permutaties = wg.permutaties(0, 1000,0)
+        self.assertIsInstance(permutaties, list)
+
+    def test___init3b__(self):
+        wd = WeaponsDict("../Data/Weapons.csv")
+        wg = WeaponGrouping("1-6|A,B,C".lower(), wd)
+        self.assertIsInstance(wg, WeaponGrouping)
+        permutaties = wg.permutaties(0, 1000,0)
         self.assertIsInstance(permutaties, list)
 
     def test___init4__(self):
