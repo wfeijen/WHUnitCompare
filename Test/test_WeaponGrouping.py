@@ -17,6 +17,8 @@ class TestWeaponGrouping(TestCase):
         self.assertIsInstance(wg, WeaponGrouping)
         permutaties = wg.permutaties(0, 1000,0)
         self.assertIsInstance(permutaties, list)
+        sg = permutaties[0].slotsGebruikt()
+        self.assertEqual(sg, 1)
 
     def test___init2__(self):
         wd = WeaponsDict("../Data/Weapons.csv")
@@ -24,6 +26,8 @@ class TestWeaponGrouping(TestCase):
         self.assertIsInstance(wg, WeaponGrouping)
         permutaties = wg.permutaties(0, 1000,0)
         self.assertIsInstance(permutaties, list)
+        sg = permutaties[0].slotsGebruikt()
+        self.assertEqual(sg, 1)
 
     def test___init3__(self):
         wd = WeaponsDict("../Data/Weapons.csv")
@@ -31,6 +35,8 @@ class TestWeaponGrouping(TestCase):
         self.assertIsInstance(wg, WeaponGrouping)
         permutaties = wg.permutaties(0, 1000,0)
         self.assertIsInstance(permutaties, list)
+        sg = permutaties[0].slotsGebruikt()
+        self.assertEqual(sg, 1)
 
     def test___init3b__(self):
         wd = WeaponsDict("../Data/Weapons.csv")
@@ -38,6 +44,17 @@ class TestWeaponGrouping(TestCase):
         self.assertIsInstance(wg, WeaponGrouping)
         permutaties = wg.permutaties(0, 1000,0)
         self.assertIsInstance(permutaties, list)
+        sg = permutaties[0].slotsGebruikt()
+        self.assertEqual(sg, 1)
+
+    def test___init3c__(self):
+        wd = WeaponsDict("../Data/Weapons.csv")
+        wg = WeaponGrouping("0-6|A,B,C".lower(), wd)
+        self.assertIsInstance(wg, WeaponGrouping)
+        permutaties = wg.permutaties(0, 1000, 0)
+        self.assertIsInstance(permutaties, list)
+        sg = permutaties[0].slotsGebruikt()
+        self.assertEqual(sg, 0)
 
     def test___init4__(self):
         wd = WeaponsDict("../Data/Weapons.csv")
