@@ -60,6 +60,10 @@ class TestWeaponGrouping(TestCase):
         wd = WeaponsDict("../Data/Weapons.csv")
         wg = WeaponGrouping("1-6|A,B[0-4|C,D]".lower(), wd)
         self.assertIsInstance(wg, WeaponGrouping)
+        permutaties = wg.permutaties(0, 1000, 0)
+        self.assertIsInstance(permutaties, list)
+        sg = permutaties[0].slotsGebruikt()
+        self.assertEqual(sg, 0)
 
     def test___init5__(self):
         wd = WeaponsDict("../Data/Weapons.csv")

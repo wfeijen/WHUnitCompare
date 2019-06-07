@@ -10,3 +10,8 @@ class Permutatie(defaultdict):
     def merge(self, newDict):
         for k, v in newDict.items():
             self[k] += v
+
+    def copy(self):
+        newPermutatie = Permutatie()
+        newPermutatie.merge(self)
+        return newPermutatie

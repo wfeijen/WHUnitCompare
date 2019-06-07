@@ -95,8 +95,7 @@ class WeaponGrouping(list):
             # kijken of we de min door kunnen schuiven naar een ander en zo ja pak 0
             if minUse == 0 or counter < len(self) - 1:
                 gevondenPermutaties = self.permutaties(weaponSlotsUsed, weaponsSlotsToUse , counter + 1)
-                if type(gevondenPermutaties) == list: #Kan denk ik weg
-                    permutatiesTerug.extend(gevondenPermutaties)
+                permutatiesTerug.extend(gevondenPermutaties)
             # wat als we zorgen dat we voldoen aan minOccurences door nu die occurences te pakken
             if minUse > 0:
                 gevondenPermutatie = Permutatie() # we hoeven niet echt meer een aanroep te doen want een ander kan al geen maxuse meer doen
@@ -112,27 +111,33 @@ class WeaponGrouping(list):
             # kijken of we de min door kunnen schuiven naar een ander en zo ja pak 0
             if minUse == 0 or counter < len(self) - 1:
                 gevondenPermutaties = self.permutaties(weaponSlotsUsed, weaponsSlotsToUse , counter + 1)
-                if type(gevondenPermutaties) == list: #Kan denk ik weg
-                    permutatiesTerug.extend(gevondenPermutaties)
+                permutatiesTerug.extend(gevondenPermutaties)
             # wat als we zorgen dat we voldoen aan minOccurences door nu die occurences te pakken
             if minUse > 0:
-                gevondenPermutatiesDieperLevel = self[counter].permutaties(0, minUse, 0)
-                if type(gevondenPermutatiesDieperLevel) == list: #Kan denk ik weg
-                    for permutatieDL in gevondenPermutatiesDieperLevel:
-                        if permutatieDL.slotsGebruikt() < minUse and counter < len(self) -1:
-                            permutatiesZelfdeLevel = self.permutaties(weaponSlotsUsed + permutatieDL.slotsGebruikt(),
-                                                                      weaponsSlotsToUse - permutatieDL.slotsGebruikt() ,
-                                                                      counter + 1)
-                            for permutatieZL in permutatiesZelfdeLevel:
-                                permutatie = permutatieDL
-                                permutatie.merge(permutatieZL)
-                                permutatiesTerug.append()
-                    permutatiesTerug.extend(gevondenPermutaties)
+                gevondenPermutatiesDieperLevel = self[counter].permutaties(0, maxUse, 0)
+                for permutatieDL in gevondenPermutatiesDieperLevel:
+                    if permutatieDL.slotsGebruikt() < minUse and counter < len(self) -1:
+                        permutatiesZelfdeLevel = self.permutaties(weaponSlotsUsed + permutatieDL.slotsGebruikt(),
+                                                                  weaponsSlotsToUse - permutatieDL.slotsGebruikt() ,
+                                                                  counter + 1)
+                        for permutatieZL in permutatiesZelfdeLevel:
+                            permutatie = permutatieDL.copy()
+                            permutatie.merge(permutatieZL)
+                            permutatiesTerug.append(permutatie)
+                    else: permutatiesTerug.append(permutatieDL)
             # max out on this weapon
             if minUse < maxUse: # anders gelijk aan min
-                gevondenPermutatie = Permutatie() # we hoeven niet echt meer een aanroep te doen want alles is opgebruikt
-                gevondenPermutatie[self[counter].name] += maxUse
-                permutatiesTerug.append(gevondenPermutatie)
+                gevondenPermutatiesDieperLevel = self[counter].permutaties(0, maxUse, 0)
+                for permutatieDL in gevondenPermutatiesDieperLevel:
+                    if permutatieDL.slotsGebruikt() < maxUse and counter < len(self) -1:
+                        permutatiesZelfdeLevel = self.permutaties(weaponSlotsUsed + permutatieDL.slotsGebruikt(),
+                                                                  weaponsSlotsToUse - permutatieDL.slotsGebruikt() ,
+                                                                  counter + 1)
+                        for permutatieZL in permutatiesZelfdeLevel:
+                            permutatie = permutatieDL.copy()
+                            permutatie.merge(permutatieZL)
+                            permutatiesTerug.append(permutatie)
+                    else: permutatiesTerug.append(permutatieDL)
         return permutatiesTerug
 
 
