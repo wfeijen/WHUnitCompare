@@ -9,8 +9,11 @@ from src.Permutatie import Permutatie
 #1-6|A,B[0-4|C,[0-4|E,F][0-4|D]]
 #1-6|[0-3|A,B][0-3|C,D][0-3|E,F]
 
-class WeaponGrouping(list):
+class WeaponGrouping:
     def __init__(self, stringIn, weaponDictionary):
+        # Aanmaken lijsten
+        self.weapons = list()
+        self.weaponGroupings = list()
         # Schonen string
         geschoondeString = re.sub(' *, *', ',', stringIn)
         # left from | is the possible occurrences
@@ -39,14 +42,14 @@ class WeaponGrouping(list):
         for i in range(len(groupContents)):
             if groupContents[i] == "," and haakjesDiepte == 0:
                 weapon = weaponDictionary[weaponName]
-                self.append(weapon)
+                self.weapons.append(weapon)
                 weaponName = ""
             elif groupContents[i] == "[":
                 if haakjesDiepte == 0:
                     groepString = ""
                     if weaponName != "":
                         weapon = weaponDictionary[weaponName]
-                        self.append(weapon)
+                        self.weapons.append(weapon)
                         weaponName = ""
                 else:
                     groepString = groepString + groupContents[i]
@@ -55,7 +58,7 @@ class WeaponGrouping(list):
                 haakjesDiepte = haakjesDiepte - 1
                 if haakjesDiepte == 0:
                     nieuweWeaponGroup = WeaponGrouping(groepString, weaponDictionary)
-                    self.append(nieuweWeaponGroup)
+                    self.weaponGroupings.append(nieuweWeaponGroup)
                 else:
                     groepString = groepString + groupContents[i]
             elif haakjesDiepte == 0:
@@ -70,10 +73,13 @@ class WeaponGrouping(list):
                 print("     De volgende wapengroeperingsregel kon niet verwerkt worden: ", stringIn)
                 print("     Wapen:", weaponName, " kon niet gevonden worden in de dictionary")
                 print("     De foutmelding is:", e.args)
-            self.append(weapon)
-        self.sort(key = lambda x: x.maxOccurrences, reverse=False)
+            self.weapons.append(weapon)
 
-    def permutaties(self, weaponSlotsUsed, weaponsSlotsToUse, counter):
+
+
+
+
+    def permutatiesXX(self, weaponSlotsUsed, weaponsSlotsToUse, counter):
         # retourneert een lijst met permutaties (lijst met lijsten) en een lijst met slotsOver
 
         # Ontsnappingsclausules
