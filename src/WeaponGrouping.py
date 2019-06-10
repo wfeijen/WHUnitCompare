@@ -1,6 +1,6 @@
 import re
 from src.Weapon import Weapon
-from src.Permutatie import Permutatie
+from src.Permutation import Permutation
 
 
 #1|A
@@ -75,76 +75,89 @@ class WeaponGrouping:
                 print("     De foutmelding is:", e.args)
             self.weapons.append(weapon)
 
+    def combineerMetPermutatiesZelfdeLevel(self, weaponsSlotsToUseMin, weaponsSlotsToUseMax, counter, permutatieList):
+        permutationsReturn = []
+        for permutatieDL in permutatieList:
+            permutatiesZelfdeLevel = self.permutationsOfGroupsInSameLevel(weaponsSlotsToUseMin - permutatieDL.slotsGebruikt(),
+                                                                          weaponsSlotsToUseMax - permutatieDL.slotsGebruikt(),
+                                                                          counter)
 
+            for permutatieZL in permutatiesZelfdeLevel:
+                permutatie = permutatieDL.copy()
+                permutatie.merge(permutatieZL)
+                permutationsReturn.append(permutatie)
+            permutationsReturn.append(permutatieDL)
+        return permutationsReturn
 
-
-
-    def permutatiesXX(self, weaponSlotsUsed, weaponsSlotsToUse, counter):
-        # retourneert een lijst met permutaties (lijst met lijsten) en een lijst met slotsOver
+    def permutationsOfGroupsInSameLevel(self, weaponsSlotsToUseMin, weaponsSlotsToUseMax, counter):
+        # Checkt op min en max en besteedt zoeken naar permutaties met maximale en minimale vulling voor dit slot uit
 
         # Ontsnappingsclausules
-        if counter == len(self): return ([Permutatie()])
-        if weaponsSlotsToUse == 0: return ([Permutatie()])
-        maxUse = min(weaponsSlotsToUse, self.maxOccurrences)
-        minUse = max(0, self.minOccurences - weaponSlotsUsed)
-        if maxUse < minUse: return None
+        if counter == len(self.weaponGroupings): return ([])  # er is maar 1 mogelijkheid
+        if weaponsSlotsToUseMax == 0: return ([])  # er is maar 1 mogelijkheid
+        if weaponsSlotsToUseMax < weaponsSlotsToUseMin:
+            return ([])  # niet valide, dus we geven geen permutaties terug
 
-        # for weapon in Counter we either take none, all or whats left, then we do a new iteration with counter +1
-        permutatiesTerug = [] # list of dictionaries met wapen-naam, aantal
+        permutationsReturn = []
+        # we proberen eerst te duiken voor deze slot en kijken of andere slots op dit level aan de condities kunnen voldoen
+        if weaponsSlotsToUseMin == 0 or counter < len(self.weaponGroupings) + len(self.weapons) - 1:
+            gevondenPermutaties = self.permutationsOfGroupsInSameLevel(weaponsSlotsToUseMin, weaponsSlotsToUseMax, counter + 1)
+            permutationsReturn.extend(gevondenPermutaties)
+        # wat als we zorgen dat we voldoen aan minOccurences door nu die minoccurences te pakken of in ieder geval voor de max proberen te gaan
+        if weaponsSlotsToUseMin > 0:
+            gevondenPermutatiesDieperLevel = self.weaponGroupings[counter].permutatiesNewLevel(0, weaponsSlotsToUseMin)
+            for permutatie in gevondenPermutatiesDieperLevel: permutatie.gedoken = True
+            permutationsReturn.extend(gevondenPermutatiesDieperLevel)
 
-        # Twee permutaties
-        # minimalizeer het aantal van dit wapen
-        if self.minOccurences > maxUse: return None
+        # max out on this weapon
+        if weaponsSlotsToUseMin < weaponsSlotsToUseMax:  # anders gelijk aan min
+            gevondenPermutatiesDieperLevel = self.weaponGroupings[counter].permutatiesNewLevel(weaponsSlotsToUseMin, weaponsSlotsToUseMax)
+            #verwijderen gedoken permutaties
+            gevondenPermutatiesDieperLevel = [p for p in gevondenPermutatiesDieperLevel if p.gedoken == False]
+            permutationsReturn.extend(self.combineerMetPermutatiesZelfdeLevel(weaponsSlotsToUseMin,
+                                                                         weaponsSlotsToUseMax,
+                                                                         counter + 1, gevondenPermutatiesDieperLevel))
+        return permutationsReturn
 
-        if type(self[counter]) ==  Weapon:
-            # minimize use of this weapon Dit kan op twee manieren. O pakken en andere in dezelfde groep de min laten pakken of min pakken
-            # kijken of we de min door kunnen schuiven naar een ander en zo ja pak 0
-            if minUse == 0 or counter < len(self) - 1:
-                gevondenPermutaties = self.permutaties(weaponSlotsUsed, weaponsSlotsToUse , counter + 1)
-                permutatiesTerug.extend(gevondenPermutaties)
-            # wat als we zorgen dat we voldoen aan minOccurences door nu die occurences te pakken
-            if minUse > 0:
-                gevondenPermutatie = Permutatie() # we hoeven niet echt meer een aanroep te doen want een ander kan al geen maxuse meer doen
-                gevondenPermutatie[self[counter].name] += minUse
-                permutatiesTerug.append(gevondenPermutatie)
-            # max out on this weapon
-            if minUse < maxUse: # anders gelijk aan min
-                gevondenPermutatie = Permutatie() # we hoeven niet echt meer een aanroep te doen want alles is opgebruikt
-                gevondenPermutatie[self[counter].name] += maxUse
-                permutatiesTerug.append(gevondenPermutatie)
-        else: # Not a weapon
-            # minimize use of this weapon Dit kan op twee manieren. O pakken en andere in dezelfde groep de min laten pakken of min pakken
-            # kijken of we de min door kunnen schuiven naar een ander en zo ja pak 0
-            if minUse == 0 or counter < len(self) - 1:
-                gevondenPermutaties = self.permutaties(weaponSlotsUsed, weaponsSlotsToUse , counter + 1)
-                permutatiesTerug.extend(gevondenPermutaties)
-            # wat als we zorgen dat we voldoen aan minOccurences door nu die occurences te pakken
-            if minUse > 0:
-                gevondenPermutatiesDieperLevel = self[counter].permutaties(0, maxUse, 0)
-                for permutatieDL in gevondenPermutatiesDieperLevel:
-                    if permutatieDL.slotsGebruikt() < minUse and counter < len(self) -1:
-                        permutatiesZelfdeLevel = self.permutaties(weaponSlotsUsed + permutatieDL.slotsGebruikt(),
-                                                                  weaponsSlotsToUse - permutatieDL.slotsGebruikt() ,
-                                                                  counter + 1)
-                        for permutatieZL in permutatiesZelfdeLevel:
-                            permutatie = permutatieDL.copy()
-                            permutatie.merge(permutatieZL)
-                            permutatiesTerug.append(permutatie)
-                    else: permutatiesTerug.append(permutatieDL)
-            # max out on this weapon
-            if minUse < maxUse: # anders gelijk aan min
-                gevondenPermutatiesDieperLevel = self[counter].permutaties(0, maxUse, 0)
-                for permutatieDL in gevondenPermutatiesDieperLevel:
-                    if permutatieDL.slotsGebruikt() < maxUse and counter < len(self) -1:
-                        permutatiesZelfdeLevel = self.permutaties(weaponSlotsUsed + permutatieDL.slotsGebruikt(),
-                                                                  weaponsSlotsToUse - permutatieDL.slotsGebruikt() ,
-                                                                  counter + 1)
-                        for permutatieZL in permutatiesZelfdeLevel:
-                            permutatie = permutatieDL.copy()
-                            permutatie.merge(permutatieZL)
-                            permutatiesTerug.append(permutatie)
-                    else: permutatiesTerug.append(permutatieDL)
-        return permutatiesTerug
+    def permutatiesNewLevel(self, weaponsSlotsToUseMinIn, weaponsSlotsToUseMaxIn):
+        # retourneert een lijst met permutaties (lijst met lijsten)
+        # we zoeken eerst permutaties van onderliggende weapon groepen
+        # vervolgens maxen en minnen we uit met losse weapons in deze groep,
+        # In dat geval is telkens 1 wapen optimaal, dus dat hoeft niet recursief.
+        # Elke wapen wordt gecombineerd in een max en een min variant.
+
+        # Preposities:
+        # Elke groep min en max is kleiner of gelijk aan die van de omvattende groep
+        # Groeps max binnen omvattende groep zijn opklimmend
+
+        # Creeren nieuwe min en max op basis van input en locale min en max
+        weaponsSlotsToUseMin = max(weaponsSlotsToUseMinIn, self.minOccurences)
+        weaponsSlotsToUseMax = min(weaponsSlotsToUseMaxIn, self.maxOccurrences)
+
+        # Checks of dit level aan de eisen kan voldoen qua min en max
+        if weaponsSlotsToUseMax < weaponsSlotsToUseMin: return [] # niet valide, dus we geven geen permutaties terug
+        if weaponsSlotsToUseMax == 0: return ([Permutation()]) # er is maar 1 mogelijkheid
+
+        permutationsInMyGoups = self.permutationsOfGroupsInSameLevel(weaponsSlotsToUseMin, weaponsSlotsToUseMax, 0)
+        permutationsReturn = []
+        for permutationInMyGroup in permutationsInMyGoups:
+            if len(permutationInMyGroup) > 0:
+                minLosseWeapons = max(0, weaponsSlotsToUseMin - permutationInMyGroup.slotsGebruikt())
+                if minLosseWeapons == 0:  # Er hoeven geen losse wapens toegevoegd te worden.
+                    permutationsReturn.append(permutationInMyGroup)
+                if permutationInMyGroup.gedoken == False:
+                    permutationsReturn.extend(permutationInMyGroup.combineToNewPermutationsWithWeapons(minLosseWeapons, self.weapons))
+                    maxLosseWeapons = weaponsSlotsToUseMax - permutationInMyGroup.slotsGebruikt()
+                    if maxLosseWeapons > 0:
+                        permutationsReturn.extend(permutationInMyGroup.combineToNewPermutationsWithWeapons(maxLosseWeapons, self.weapons))
+        if weaponsSlotsToUseMax >0:
+            for weapon in self.weapons:
+                permutationsReturn.append(Permutation.createWithOneElement(weapon.name, weaponsSlotsToUseMax))
+                if weaponsSlotsToUseMin > 0 and weaponsSlotsToUseMin < weaponsSlotsToUseMax:
+                    permutation = Permutation.createWithOneElement(weapon.name, weaponsSlotsToUseMin)
+                    permutation.gedoken = True
+                    permutationsReturn.append(permutation)
+        return permutationsReturn
 
 
 

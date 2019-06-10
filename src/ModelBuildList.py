@@ -3,7 +3,7 @@ from src.ModelBuild import ModelBuild
 
 class ModelBuildList(list):
     def createUnitBuilds(self, unitMogelijkheden):
-        weaponCombinations = unitMogelijkheden.weapons.permutaties()
+        weaponCombinations = unitMogelijkheden.weapons.permutationsOfGroupsInSameLevel()
         modelBuild = ModelBuild(unitMogelijkheden.modelEigenschappen)
 
 
