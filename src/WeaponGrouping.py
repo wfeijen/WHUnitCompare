@@ -159,6 +159,13 @@ class WeaponGrouping:
                     permutationsReturn.append(permutation)
         return permutationsReturn
 
+    def permutations(self):
+        perms = self.permutatiesNewLevel(0, 1000)
+        for perm in perms:
+            perm.order()
+        perms.sort(key=lambda x: x.rank(), reverse=False)
+        return perms
+
 
 
 

@@ -32,3 +32,15 @@ class Permutation(defaultdict):
                 dummy[weapon.name] += aantal
                 permutatiesUit.append(dummy)
         return permutatiesUit
+
+    def order(self):
+        items = sorted(self.items())
+        self.clear()
+        for k,v in items:
+            self[k] = v
+
+    def rank(self):
+        r = ""
+        for k, v in self.items():
+            r += k + str(v)
+        return r
