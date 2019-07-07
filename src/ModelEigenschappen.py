@@ -1,4 +1,4 @@
-from src.Variabele import Variabele
+from src.ValueList import ValueList
 
 class ModelEigenschappen:
     def __init__(self, stringDelen):
@@ -9,22 +9,22 @@ class ModelEigenschappen:
         i = i + 1
         self.unit = stringDelen[i]
         i = i + 1
-        self.M = Variabele(stringDelen[i])
+        self.M = ValueList(stringDelen[i])
         i = i + 1
-        self.WS = Variabele(stringDelen[i])
+        self.WS = ValueList(stringDelen[i])
         i = i + 1
-        self.BS = Variabele(stringDelen[i])
+        self.BS = ValueList(stringDelen[i])
         i = i + 1
-        self.S = Variabele(stringDelen[i])
+        self.S = ValueList(stringDelen[i])
         i = i + 1
-        self.T = Variabele(stringDelen[i])
+        self.T = ValueList(stringDelen[i])
         i = i + 1
-        self.W = Variabele(stringDelen[i])
+        self.W = ValueList(stringDelen[i])
         i = i + 1
-        self.A = Variabele(stringDelen[i])
+        self.A = ValueList(stringDelen[i])
         i = i + 1
-        self.Ld = Variabele(stringDelen[i])
+        self.Ld = ValueList(stringDelen[i])
         i = i + 1
-        self.save = Variabele(stringDelen[i])
+        self.save = ValueList(stringDelen[i])
         i = i + 1
-        self.Inv = Variabele(stringDelen[i])
+        self.Inv = ValueList(stringDelen[i])

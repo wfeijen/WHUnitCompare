@@ -1,5 +1,6 @@
 # used to have flexibility in the way we operate with variabeles
 import re
+from random import randrange
 
 
 def waardenVerdeling(dobbelsteen, aantal):
@@ -14,7 +15,7 @@ def waardenVerdeling(dobbelsteen, aantal):
     return waarden
 
 
-class Variabele(list):
+class ValueList(list):
     def __init__(self, stringIn=""):
         if re.match("^[0-9][0-9]?$", stringIn):
             self.append(int(stringIn))
@@ -28,6 +29,10 @@ class Variabele(list):
             self.append(0)
         else:
             raise ValueError(stringIn, " it's not a constant or a die")
+
+    def value(self):
+        return self[randrange(len(self))]
+
 
 
 

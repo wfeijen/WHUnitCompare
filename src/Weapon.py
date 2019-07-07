@@ -1,4 +1,4 @@
-from src.Variabele import Variabele
+from src.ValueList import ValueList
 import re
 
 
@@ -20,46 +20,42 @@ class Weapon:
             strTypeShots = stringDelen[field].split(" ")
             if re.match("^melee", strTypeShots[0]):
                 self.type = "melee"
-                self.shots = Variabele("0")
+                self.shots = ValueList("0")
                 self.shots.AttacksUser = True
             else:
                 self.type = strTypeShots[0]
-                self.shots = Variabele(strTypeShots[1])
+                self.shots = ValueList(strTypeShots[1])
                 self.shots.AttacksUser = False
 
             field = field - 1
             strRange = stringDelen[field].split("-")
             if re.match("^melee", strRange[0]):
-                self.rangeMin = Variabele("0")
-                self.rangeMax = Variabele("0")
+                self.range = (0, 0)
             elif len(strRange)>1:
-                self.rangeMax = Variabele(strRange[1])
-                self.rangeMin = Variabele(strRange[0])
+                self.range = (int(strRange[0]), int(strRange[1]))
             elif re.match("^pistol", self.type):
-                self.rangeMin = Variabele("0")
-                self.rangeMax = Variabele(strRange[0])
+                self.range = (0, int(strRange[0]))
             else:
-                self.rangeMin = Variabele("1")
-                self.rangeMax = Variabele(strRange[0])
+                self.range = (1, int(strRange[0]))
 
             field = field + 2
             if re.match("^user", stringDelen[field]):
-                self.S  = Variabele("0")
+                self.S  = ValueList("0")
                 self.S.efectModelStrengt = "+"
             elif re.match("^\*", stringDelen[field]):
-                self.S  = Variabele("0")
+                self.S  = ValueList("0")
                 self.S.efectModelStrengt = "*"
             elif re.match("^[+x]", stringDelen[field]):
-                self.S  = Variabele(stringDelen[field][1:])
+                self.S  = ValueList(stringDelen[field][1:])
                 self.S.efectModelStrengt = stringDelen[field][0]
             else:
-                self.S = Variabele(stringDelen[field])
+                self.S = ValueList(stringDelen[field])
                 self.S.efectModelStrengt = ""
 
             field = field + 1
-            self.AP = Variabele(stringDelen[field].replace("-",""))
+            self.AP = ValueList(stringDelen[field].replace("-", ""))
             field = field + 1
-            self.D = Variabele(stringDelen[field])
+            self.D = ValueList(stringDelen[field])
             field = field + 1
             self.abilities = stringDelen[field]
         except ValueError as e:
