@@ -152,9 +152,9 @@ class WeaponGrouping:
                         permutationsReturn.extend(permutationInMyGroup.combineToNewPermutationsWithWeapons(maxLosseWeapons, self.weapons))
         if weaponsSlotsToUseMax >0:
             for weapon in self.weapons:
-                permutationsReturn.append(Permutation.createWithOneElement(weapon.name, weaponsSlotsToUseMax))
+                permutationsReturn.append(Permutation.createWithOneElement(weapon, weaponsSlotsToUseMax))
                 if weaponsSlotsToUseMin > 0 and weaponsSlotsToUseMin < weaponsSlotsToUseMax:
-                    permutation = Permutation.createWithOneElement(weapon.name, weaponsSlotsToUseMin)
+                    permutation = Permutation.createWithOneElement(weapon, weaponsSlotsToUseMin)
                     permutation.gedoken = True
                     permutationsReturn.append(permutation)
         return permutationsReturn

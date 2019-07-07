@@ -64,3 +64,21 @@ class Weapon:
             print("     Het betreft veld:", field, "tellend vanaf 0")
             print("     De foutmelding is:", e.args)
 
+    def __hash__(self):
+        return hash(self.name)
+
+    def __eq__(self, other):
+        if isinstance(other, self.__class__):
+            return self.name == other.name
+        else:
+            return False
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
+
+    def __lt__(self, other):
+        return self.name < other.name
+
+    def __repr__(self):
+        return str(self.name)
+

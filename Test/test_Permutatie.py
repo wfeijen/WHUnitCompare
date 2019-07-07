@@ -37,9 +37,5 @@ class TestPermutatie(TestCase):
         self.assertEqual(keys[1], 'key2')
         self.assertEqual(keys[2], 'key3')
 
-    def test___rank1__(self):
-        p1 = Permutation()
-        p1.merge({'key3': 1, 'key1': 2, 'key2': 3})
-        r = p1.rank()
-        self.assertEqual(r, "key31key12key23")
+
 

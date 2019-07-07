@@ -6,9 +6,9 @@ class Permutation(defaultdict):
         self.gedoken = False
 
     @classmethod
-    def createWithOneElement(self, name, ammount):
+    def createWithOneElement(self, object, ammount):
         dummy = Permutation()
-        dummy[name] = ammount
+        dummy[object] = ammount
         return dummy
 
     def slotsGebruikt(self):
@@ -29,7 +29,7 @@ class Permutation(defaultdict):
         else:
             for weapon in weapons:
                 dummy = self.copy()
-                dummy[weapon.name] += aantal
+                dummy[weapon] += aantal
                 permutatiesUit.append(dummy)
         return permutatiesUit
 
@@ -42,5 +42,5 @@ class Permutation(defaultdict):
     def rank(self):
         r = ""
         for k, v in self.items():
-            r += k + str(v)
+            r += k.name + str(v)
         return r
